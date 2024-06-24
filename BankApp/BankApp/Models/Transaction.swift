@@ -7,14 +7,7 @@
 
 import Foundation
 
-struct Transaction {
-    
-    enum TransactionStatus {
-        case executed
-        case declined
-        case inProgress
-    }
-    
+struct Transaction {    
     let company: String
     let number: String
     let date: Date
