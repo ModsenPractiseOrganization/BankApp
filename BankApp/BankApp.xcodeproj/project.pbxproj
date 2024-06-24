@@ -66,6 +66,7 @@
 				A0CD1D322C2A1DB9004E2380 /* DataProviders */,
 				A0CD1D3D2C2A2374004E2380 /* Enumerations */,
 				A0CD1D372C2A1E18004E2380 /* Models */,
+				A0CD1D412C2A24D2004E2380 /* Views */,
 				A0CD1D262C2A1CF1004E2380 /* Assets.xcassets */,
 				A0CD1D282C2A1CF1004E2380 /* Preview Content */,
 			);
@@ -120,6 +121,13 @@
 				A0CD1D3E2C2A2384004E2380 /* TransactionStatus.swift */,
 			);
 			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		A0CD1D412C2A24D2004E2380 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
