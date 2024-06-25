@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0701F8B2C2B47520041B66F /* CurrentAccountViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0701F8A2C2B47520041B66F /* CurrentAccountViewCell.swift */; };
+		A0748C402C2AFA32002DEE84 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0748C3F2C2AFA32002DEE84 /* TransactionView.swift */; };
 		A0CD1D232C2A1CF0004E2380 /* BankAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD1D222C2A1CF0004E2380 /* BankAppApp.swift */; };
 		A0CD1D252C2A1CF0004E2380 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD1D242C2A1CF0004E2380 /* ContentView.swift */; };
 		A0CD1D272C2A1CF1004E2380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0CD1D262C2A1CF1004E2380 /* Assets.xcassets */; };
@@ -16,9 +18,13 @@
 		A0CD1D392C2A1E28004E2380 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD1D382C2A1E28004E2380 /* Transaction.swift */; };
 		A0CD1D3C2C2A1E43004E2380 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD1D3B2C2A1E43004E2380 /* Account.swift */; };
 		A0CD1D3F2C2A2384004E2380 /* TransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD1D3E2C2A2384004E2380 /* TransactionStatus.swift */; };
+		A0CD1D452C2A255F004E2380 /* CurrentAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD1D442C2A255F004E2380 /* CurrentAccountView.swift */; };
+		A0E8AD2B2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E8AD2A2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0701F8A2C2B47520041B66F /* CurrentAccountViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAccountViewCell.swift; sourceTree = "<group>"; };
+		A0748C3F2C2AFA32002DEE84 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		A0CD1D1F2C2A1CF0004E2380 /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CD1D222C2A1CF0004E2380 /* BankAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAppApp.swift; sourceTree = "<group>"; };
 		A0CD1D242C2A1CF0004E2380 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,6 +35,8 @@
 		A0CD1D382C2A1E28004E2380 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		A0CD1D3B2C2A1E43004E2380 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		A0CD1D3E2C2A2384004E2380 /* TransactionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatus.swift; sourceTree = "<group>"; };
+		A0CD1D442C2A255F004E2380 /* CurrentAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAccountView.swift; sourceTree = "<group>"; };
+		A0E8AD2A2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAccountViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0748C3E2C2AF9DF002DEE84 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A0748C3F2C2AFA32002DEE84 /* TransactionView.swift */,
+				A0701F8A2C2B47520041B66F /* CurrentAccountViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		A0CD1D162C2A1CF0004E2380 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +80,7 @@
 			children = (
 				A0CD1D312C2A1D8D004E2380 /* App */,
 				A0CD1D302C2A1D85004E2380 /* ContentView */,
+				A0748C3E2C2AF9DF002DEE84 /* Components */,
 				A0CD1D322C2A1DB9004E2380 /* DataProviders */,
 				A0CD1D3D2C2A2374004E2380 /* Enumerations */,
 				A0CD1D372C2A1E18004E2380 /* Models */,
@@ -126,8 +144,34 @@
 		A0CD1D412C2A24D2004E2380 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A0CD1D422C2A2519004E2380 /* CurrentAccountView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A0CD1D422C2A2519004E2380 /* CurrentAccountView */ = {
+			isa = PBXGroup;
+			children = (
+				A0CD1D432C2A2552004E2380 /* View */,
+				A0E8AD292C2B5EE600CFFC0E /* ViewModel */,
+			);
+			path = CurrentAccountView;
+			sourceTree = "<group>";
+		};
+		A0CD1D432C2A2552004E2380 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0CD1D442C2A255F004E2380 /* CurrentAccountView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A0E8AD292C2B5EE600CFFC0E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A0E8AD2A2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,11 +246,15 @@
 			files = (
 				A0CD1D362C2A1E01004E2380 /* AccountsProvider.swift in Sources */,
 				A0CD1D252C2A1CF0004E2380 /* ContentView.swift in Sources */,
+				A0E8AD2B2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift in Sources */,
 				A0CD1D3F2C2A2384004E2380 /* TransactionStatus.swift in Sources */,
 				A0CD1D232C2A1CF0004E2380 /* BankAppApp.swift in Sources */,
 				A0CD1D342C2A1DF4004E2380 /* RecentTransactionsProvider.swift in Sources */,
 				A0CD1D392C2A1E28004E2380 /* Transaction.swift in Sources */,
+				A0701F8B2C2B47520041B66F /* CurrentAccountViewCell.swift in Sources */,
+				A0CD1D452C2A255F004E2380 /* CurrentAccountView.swift in Sources */,
 				A0CD1D3C2C2A1E43004E2380 /* Account.swift in Sources */,
+				A0748C402C2AFA32002DEE84 /* TransactionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
