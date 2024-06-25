@@ -59,7 +59,9 @@ struct CurrentAccountView: View {
                     } label: {
                         VStack {
                             TransactionView(transaction: transaciton)
-                            Divider()
+                            if transaciton != recentTransactions.prefix(4).last {
+                                Divider()
+                            }
                         }
                     }
                 }
