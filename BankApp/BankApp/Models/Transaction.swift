@@ -13,4 +13,19 @@ struct Transaction: Hashable {
     let date: Date
     let status: TransactionStatus
     let amount: Double
+    
+    var getFormattedAmount: String {
+        let formattedAmount = String(format: "%.2f", amount)
+        return "$\(formattedAmount)"
+    }
+    
+    var getFormattedDate: String {
+        let dateFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd.MM.yyyy"
+            return formatter
+        }()
+        
+        return dateFormatter.string(from: date)
+    }
 }
