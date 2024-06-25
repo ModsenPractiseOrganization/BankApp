@@ -10,6 +10,12 @@ import SwiftUI
 struct TransactionView: View {
     let transaction: Transaction
     
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        return formatter
+    }()
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -18,7 +24,7 @@ struct TransactionView: View {
                     .font(.title3)
                     .fontWeight(.bold)
                 
-                Text(transaction.date.formatted())
+                Text(dateFormatter.string(from: transaction.date))
                     .foregroundStyle(.secondaryText)
                 
                 Text(transaction.status.rawValue)
