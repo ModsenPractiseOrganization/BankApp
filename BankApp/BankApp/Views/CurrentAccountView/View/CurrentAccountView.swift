@@ -10,6 +10,8 @@ import SwiftUI
 struct CurrentAccountView: View {
     
     @State private var currentAccount = AccountsProvider.getAccounts().first
+    @State private var shouldPresentSheet = false
+    
     private let recentTransactions = RecentTransactionsProvider.getRecentTransactions()
     
     var body: some View {
@@ -55,7 +57,7 @@ struct CurrentAccountView: View {
             VStack {
                 ForEach(recentTransactions.prefix(4), id: \.self) { transaction in
                     Button {
-                        
+                        shouldPresentSheet.toggle()
                     } label: {
                         VStack {
                             TransactionView(transaction: transaction)
@@ -63,6 +65,9 @@ struct CurrentAccountView: View {
                                 Divider()
                             }
                         }
+                    }
+                    .sheet(isPresented: $shouldPresentSheet) {
+                        TransactionDetailsView(transaction: transaction)
                     }
                 }
             }
