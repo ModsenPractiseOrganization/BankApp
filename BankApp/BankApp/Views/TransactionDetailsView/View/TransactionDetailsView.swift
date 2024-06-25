@@ -42,6 +42,11 @@ struct TransactionDetailsView: View {
                 title: "Amount",
                 value: transaction.getFormattedAmount
             )
+            .padding(.bottom, 32)
+            
+            CustomButtonView(title: "Okay") {
+                dismiss()
+            }
                         
             Spacer()
         }
