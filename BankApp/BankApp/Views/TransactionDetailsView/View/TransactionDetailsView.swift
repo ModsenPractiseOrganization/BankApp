@@ -46,9 +46,9 @@ struct TransactionDetailsView: View {
             )
             .padding(.bottom, 32)
             
-//            CustomButtonView(title: "Okay") {
-//                dismiss()
-//            }
+            CustomButtonView(title: "Okay") {
+                dismiss()
+            }
             
             Spacer()
         }
