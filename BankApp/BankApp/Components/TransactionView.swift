@@ -34,6 +34,11 @@ struct TransactionView: View {
                 Image("chevron.forward.dark")
             }
         }
-        
     }
+}
+
+#Preview {
+    TransactionView(
+        transaction: RecentTransactionsProvider.getRecentTransactions().first!
+    )
 }
