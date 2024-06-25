@@ -22,7 +22,7 @@ struct CustomButtonView: View {
                     .fontWeight(.black)
             }
             .padding()
-            .frame(width: UIScreen.main.bounds.width - 16)
+            .frame(width: UIScreen.main.bounds.width - 8)
             .background {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundStyle(.milkBlue)
