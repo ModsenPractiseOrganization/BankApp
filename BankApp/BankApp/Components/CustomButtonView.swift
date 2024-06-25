@@ -20,12 +20,12 @@ struct CustomButtonView: View {
                     .foregroundStyle(.white)
                     .font(.title3)
                     .fontWeight(.black)
-            }
-            .padding()
-            .frame(width: UIScreen.main.bounds.width - 8)
-            .background {
-                RoundedRectangle(cornerRadius: 15)
-                    .foregroundStyle(.milkBlue)
+                    .padding()
+                    .frame(width: UIScreen.main.bounds.width - 8)
+                    .background {
+                        RoundedRectangle(cornerRadius: 15)
+                            .foregroundStyle(.milkBlue)
+                    }
             }
         }
     }
