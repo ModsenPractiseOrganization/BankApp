@@ -34,7 +34,9 @@ struct TransactionView: View {
             Spacer()
             
             HStack {
-                Text(String(format: "%.2f", transaction.amount))
+                let formattedAmount = String(format: "%.2f", transaction.amount)
+                
+                Text("$\(formattedAmount)")
                     .foregroundStyle(.white)
                 
                 Image("chevron.forward.dark")
