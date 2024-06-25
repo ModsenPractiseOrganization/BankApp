@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0748C402C2AFA32002DEE84 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0748C3F2C2AFA32002DEE84 /* TransactionView.swift */; };
 		A0CD1D232C2A1CF0004E2380 /* BankAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD1D222C2A1CF0004E2380 /* BankAppApp.swift */; };
 		A0CD1D252C2A1CF0004E2380 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD1D242C2A1CF0004E2380 /* ContentView.swift */; };
 		A0CD1D272C2A1CF1004E2380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0CD1D262C2A1CF1004E2380 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0748C3F2C2AFA32002DEE84 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		A0CD1D1F2C2A1CF0004E2380 /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CD1D222C2A1CF0004E2380 /* BankAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAppApp.swift; sourceTree = "<group>"; };
 		A0CD1D242C2A1CF0004E2380 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0748C3E2C2AF9DF002DEE84 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A0748C3F2C2AFA32002DEE84 /* TransactionView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		A0CD1D162C2A1CF0004E2380 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +75,7 @@
 			children = (
 				A0CD1D312C2A1D8D004E2380 /* App */,
 				A0CD1D302C2A1D85004E2380 /* ContentView */,
+				A0748C3E2C2AF9DF002DEE84 /* Components */,
 				A0CD1D322C2A1DB9004E2380 /* DataProviders */,
 				A0CD1D3D2C2A2374004E2380 /* Enumerations */,
 				A0CD1D372C2A1E18004E2380 /* Models */,
@@ -227,6 +238,7 @@
 				A0CD1D392C2A1E28004E2380 /* Transaction.swift in Sources */,
 				A0CD1D452C2A255F004E2380 /* CurrentAccountView.swift in Sources */,
 				A0CD1D3C2C2A1E43004E2380 /* Account.swift in Sources */,
+				A0748C402C2AFA32002DEE84 /* TransactionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
