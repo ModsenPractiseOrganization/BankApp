@@ -53,13 +53,13 @@ struct CurrentAccountView: View {
             
             // LIST
             VStack {
-                ForEach(recentTransactions.prefix(4), id: \.self) { transaciton in
+                ForEach(recentTransactions.prefix(4), id: \.self) { transaction in
                     Button {
                         
                     } label: {
                         VStack {
-                            TransactionView(transaction: transaciton)
-                            if transaciton != recentTransactions.prefix(4).last {
+                            TransactionView(transaction: transaction)
+                            if transaction != recentTransactions.prefix(4).last {
                                 Divider()
                             }
                         }
