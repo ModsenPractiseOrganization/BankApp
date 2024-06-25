@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Transaction {    
+struct Transaction: Hashable {
     let company: String
     let number: String
     let date: Date
