@@ -65,6 +65,7 @@ struct CurrentAccountView: View {
                 }
             }
             .padding()
+            .frame(width: UIScreen.main.bounds.width - 8)
             .background {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundStyle(.viewBackground)
