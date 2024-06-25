@@ -11,7 +11,7 @@ struct TransactionDetailsView: View {
     let transaction: Transaction
     @Environment(\.dismiss) var dismiss
     
-    var body: some View {
+    var body: some View {            
         VStack(spacing: 16) {
             HStack {
                 Text("Transaction")
@@ -21,6 +21,7 @@ struct TransactionDetailsView: View {
                 
                 Spacer()
             }
+            .padding(.top, 20)
             .padding(.bottom, 32)
             
             TransactionInfoCell(
@@ -45,10 +46,10 @@ struct TransactionDetailsView: View {
             )
             .padding(.bottom, 32)
             
-            CustomButtonView(title: "Okay") {
-                dismiss()
-            }
-                        
+//            CustomButtonView(title: "Okay") {
+//                dismiss()
+//            }
+            
             Spacer()
         }
     }
