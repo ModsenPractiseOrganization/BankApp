@@ -38,6 +38,7 @@ struct TransactionView: View {
                 
                 Text("$\(formattedAmount)")
                     .foregroundStyle(.white)
+                    .fontWeight(.semibold)
                 
                 Image("chevron.forward.dark")
             }
