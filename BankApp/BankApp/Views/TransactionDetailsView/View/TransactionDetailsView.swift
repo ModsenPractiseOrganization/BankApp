@@ -11,47 +11,50 @@ struct TransactionDetailsView: View {
     @Environment(\.dismiss) var dismiss
     let transaction: Transaction
     
-    var body: some View {            
-        VStack(spacing: 16) {
-            HStack {
-                Text("Transaction")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.leading, 6)
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 16) {
+                HStack {
+                    Text("Transaction")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(.leading, 6)
+                    
+                    Spacer()
+                }
+                .padding(.top, 20)
+                .padding(.bottom, 32)
                 
-                Spacer()
+                TransactionInfoCell(
+                    title: "Transaction was applied in",
+                    value: transaction.company
+                )
+                TransactionInfoCell(
+                    title: "Transaction number",
+                    value: transaction.number
+                )
+                TransactionInfoCell(
+                    title: "Date",
+                    value: transaction.getFormattedDate
+                )
+                TransactionInfoCell(
+                    title: "Transaction status",
+                    value: transaction.status.rawValue
+                )
+                TransactionInfoCell(
+                    title: "Amount",
+                    value: transaction.getFormattedAmount
+                )
+                .padding(.bottom, 32)
+                
+                CustomButtonView(title: "Okay") {
+                    dismiss()
+                }
             }
-            .padding(.top, 20)
-            .padding(.bottom, 32)
-            
-            TransactionInfoCell(
-                title: "Transaction was applied in",
-                value: transaction.company
-            )
-            TransactionInfoCell(
-                title: "Transaction number",
-                value: transaction.number
-            )
-            TransactionInfoCell(
-                title: "Date",
-                value: transaction.getFormattedDate
-            )
-            TransactionInfoCell(
-                title: "Transaction status",
-                value: transaction.status.rawValue
-            )
-            TransactionInfoCell(
-                title: "Amount",
-                value: transaction.getFormattedAmount
-            )
-            .padding(.bottom, 32)
-            
-            CustomButtonView(title: "Okay") {
-                dismiss()
-            }
-            
-            Spacer()
+            .padding(.bottom, 20)
         }
+        .scrollIndicators(.hidden)
+        .background(.black)
     }
     
     @ViewBuilder
@@ -77,7 +80,5 @@ struct TransactionDetailsView: View {
 }
 
 #Preview {
-    TransactionDetailsView(
-        transaction: RecentTransactionsProvider.getRecentTransactions().first!
-    )
+    TransactionDetailsView(transaction: RecentTransactionsProvider.getRecentTransactions().first!)
 }
