@@ -64,6 +64,13 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		A0C657BE2C2C751300841145 /* AllTransactionsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AllTransactionsView;
+			sourceTree = "<group>";
+		};
 		A0CD1D162C2A1CF0004E2380 = {
 			isa = PBXGroup;
 			children = (
@@ -149,8 +156,9 @@
 		A0CD1D412C2A24D2004E2380 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A0E8AD302C2B6AC300CFFC0E /* TransactionDetailsView */,
+				A0C657BE2C2C751300841145 /* AllTransactionsView */,
 				A0CD1D422C2A2519004E2380 /* CurrentAccountView */,
+				A0E8AD302C2B6AC300CFFC0E /* TransactionDetailsView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
