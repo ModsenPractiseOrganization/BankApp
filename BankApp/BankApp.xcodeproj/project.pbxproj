@@ -20,6 +20,7 @@
 		A0CD1D3F2C2A2384004E2380 /* TransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD1D3E2C2A2384004E2380 /* TransactionStatus.swift */; };
 		A0CD1D452C2A255F004E2380 /* CurrentAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD1D442C2A255F004E2380 /* CurrentAccountView.swift */; };
 		A0E8AD2B2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E8AD2A2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift */; };
+		A0E8AD322C2B6ACD00CFFC0E /* TransactionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E8AD312C2B6ACD00CFFC0E /* TransactionDetailsView.swift */; };
 		A0E8AD382C2B777B00CFFC0E /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E8AD372C2B777B00CFFC0E /* CustomButtonView.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		A0CD1D3E2C2A2384004E2380 /* TransactionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatus.swift; sourceTree = "<group>"; };
 		A0CD1D442C2A255F004E2380 /* CurrentAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAccountView.swift; sourceTree = "<group>"; };
 		A0E8AD2A2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAccountViewModel.swift; sourceTree = "<group>"; };
+		A0E8AD312C2B6ACD00CFFC0E /* TransactionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsView.swift; sourceTree = "<group>"; };
 		A0E8AD372C2B777B00CFFC0E /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 		A0CD1D412C2A24D2004E2380 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A0E8AD302C2B6AC300CFFC0E /* TransactionDetailsView */,
 				A0CD1D422C2A2519004E2380 /* CurrentAccountView */,
 			);
 			path = Views;
@@ -173,6 +176,30 @@
 			isa = PBXGroup;
 			children = (
 				A0E8AD2A2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A0E8AD302C2B6AC300CFFC0E /* TransactionDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				A0E8AD332C2B6AD000CFFC0E /* View */,
+				A0E8AD342C2B6AD500CFFC0E /* ViewModel */,
+			);
+			path = TransactionDetailsView;
+			sourceTree = "<group>";
+		};
+		A0E8AD332C2B6AD000CFFC0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0E8AD312C2B6ACD00CFFC0E /* TransactionDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A0E8AD342C2B6AD500CFFC0E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -254,6 +281,7 @@
 				A0CD1D3F2C2A2384004E2380 /* TransactionStatus.swift in Sources */,
 				A0CD1D232C2A1CF0004E2380 /* BankAppApp.swift in Sources */,
 				A0CD1D342C2A1DF4004E2380 /* RecentTransactionsProvider.swift in Sources */,
+				A0E8AD322C2B6ACD00CFFC0E /* TransactionDetailsView.swift in Sources */,
 				A0CD1D392C2A1E28004E2380 /* Transaction.swift in Sources */,
 				A0701F8B2C2B47520041B66F /* CurrentAccountViewCell.swift in Sources */,
 				A0CD1D452C2A255F004E2380 /* CurrentAccountView.swift in Sources */,
@@ -398,8 +426,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -427,8 +456,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

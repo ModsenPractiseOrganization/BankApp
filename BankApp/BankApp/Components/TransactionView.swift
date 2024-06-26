@@ -24,7 +24,7 @@ struct TransactionView: View {
                     .font(.title3)
                     .fontWeight(.bold)
                 
-                Text(dateFormatter.string(from: transaction.date))
+                Text(transaction.getFormattedDate)
                     .foregroundStyle(.secondaryText)
                 
                 Text(transaction.status.rawValue)
@@ -34,9 +34,7 @@ struct TransactionView: View {
             Spacer()
             
             HStack {
-                let formattedAmount = String(format: "%.2f", transaction.amount)
-                
-                Text("$\(formattedAmount)")
+                Text(transaction.getFormattedAmount)
                     .foregroundStyle(.white)
                     .fontWeight(.semibold)
                 
