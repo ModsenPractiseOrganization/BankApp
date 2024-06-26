@@ -19,6 +19,7 @@ struct CurrentAccountView: View {
             VStack {
                 HStack {
                     Text("Account")
+                        .foregroundStyle(.white)
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .padding(.leading, 6)
@@ -37,13 +38,14 @@ struct CurrentAccountView: View {
                 // RECENT TRANSACTIONS
                 HStack {
                     Text("Recent Transactions")
+                        .foregroundStyle(.white)
                         .font(.title)
                         .fontWeight(.bold)
                     
                     Spacer()
-                    
-                    Button {
-                        
+
+                    NavigationLink {
+                        AllTransactionsView(transactions: recentTransactions)
                     } label: {
                         Text("VIEW ALL")
                             .font(.subheadline)
@@ -55,7 +57,7 @@ struct CurrentAccountView: View {
                 
                 // LIST
                 VStack {
-                    ForEach(recentTransactions.prefix(4), id: \.self) { transaction in
+                    ForEach(recentTransactions.prefix(4)) { transaction in
                         VStack {
                             TransactionView(transaction: transaction)
                             if transaction != recentTransactions.prefix(4).last {
@@ -84,4 +86,8 @@ struct CurrentAccountView: View {
             .background(.black)
         }
     }
+}
+
+#Preview {
+    CurrentAccountView()
 }
