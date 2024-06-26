@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TransactionDetailsView: View {
-    let transaction: Transaction
     @Environment(\.dismiss) var dismiss
+    let transaction: Transaction
     
     var body: some View {            
         VStack(spacing: 16) {
