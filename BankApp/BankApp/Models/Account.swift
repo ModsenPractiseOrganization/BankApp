@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Account {    
+struct Account: Identifiable {
+    let id = UUID()
     let name: String
     let number: String
     let pin: String

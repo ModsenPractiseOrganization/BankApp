@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CurrentAccountViewCell: View {
     let currentAccount: Account
+    var backgroundColor: Color = .viewBackground
     
     var body: some View {
         HStack {
@@ -43,7 +44,7 @@ struct CurrentAccountViewCell: View {
         .frame(width: UIScreen.main.bounds.width - 8)
         .background {
             RoundedRectangle(cornerRadius: 20)
-                .foregroundStyle(.viewBackground)
+                .foregroundStyle(backgroundColor)
         }
     }
 }
