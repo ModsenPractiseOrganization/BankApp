@@ -7,6 +7,8 @@
 
 
 struct AccountsProvider {
+    static var currentAccount = AccountsProvider.getAccounts().first!
+    
     static func getAccounts() -> [Account] {
         [
             Account(

@@ -9,9 +9,7 @@ import SwiftUI
 
 struct AllTransactionsView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var currentTransaction: Transaction?
-    
-    let transactions: [Transaction]
+    @EnvironmentObject private var viewModel: AllTransactionsViewModel
     
     var body: some View {
         NavigationStack {
@@ -21,17 +19,16 @@ struct AllTransactionsView: View {
                 
                 ScrollView {
                     VStack {
-                        ForEach(transactions) { transaction in
+                        ForEach(viewModel.transactions) { transaction in
                             VStack {
                                 TransactionView(transaction: transaction)
-                                if transaction != transactions.last {
+                                if viewModel.isTransactionLast(transaction) {
                                     Divider()
                                 }
                             }
                             .onTapGesture {
-                                currentTransaction = transaction
+                                viewModel.setNewTransactionValue(transaction)
                             }
-                            
                         }
                     }
                     .padding()
@@ -40,7 +37,7 @@ struct AllTransactionsView: View {
                         RoundedRectangle(cornerRadius: 15)
                             .foregroundStyle(.viewBackground)
                     }
-                    .sheet(item: $currentTransaction) { transaction in
+                    .sheet(item: $viewModel.currentTransaction) { transaction in
                         TransactionDetailsView(transaction: transaction)
                             .presentationDetents([.large])
                     }
@@ -49,30 +46,40 @@ struct AllTransactionsView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "ellipsis.circle")
-                            .foregroundStyle(.white)
-                            .fontWeight(.semibold)
-                    }
+                    sortBarButton()
                 }
                 
                 ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Text("^")
-                            .font(.largeTitle)
-                            .foregroundStyle(.white)
-                            .rotationEffect(.degrees(-90))
-                            .padding(.leading, 4)
-                    }
+                    backBarButton()
                 }
             }
             .navigationBarBackButtonHidden()
             .navigationTitle("All Transactions")
             .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+    
+    @ViewBuilder
+    func sortBarButton() -> some View {
+        Button {
+            // MARK: - Мне так и не скинули DatePicker 🥄
+        } label: {
+            Image(systemName: "ellipsis.circle")
+                .foregroundStyle(.white)
+                .fontWeight(.semibold)
+        }
+    }
+    
+    @ViewBuilder
+    func backBarButton() -> some View {
+        Button {
+            dismiss()
+        } label: {
+            Text("^")
+                .font(.largeTitle)
+                .foregroundStyle(.white)
+                .rotationEffect(.degrees(-90))
+                .padding(.leading, 4)
         }
     }
 }

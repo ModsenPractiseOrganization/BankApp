@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct RecentTransactionsProvider {
-    static func getRecentTransactions() -> [Transaction] {
+struct TransactionsProvider {
+    static func getTransactions() -> [Transaction] {
         [
             Transaction(
                 company: #"OOO "Company1""#,

@@ -10,19 +10,13 @@ import SwiftUI
 struct TransactionView: View {
     let transaction: Transaction
     
-    private let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
-        return formatter
-    }()
-    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 Text(transaction.company)
-                    .foregroundStyle(.white)
                     .font(.title3)
                     .fontWeight(.bold)
+                    .foregroundStyle(.white)
                 
                 Text(transaction.getFormattedDate)
                     .foregroundStyle(.secondaryText)
@@ -34,9 +28,7 @@ struct TransactionView: View {
             Spacer()
             
             HStack {
-                Text(transaction.getFormattedAmount)
-                    .foregroundStyle(.white)
-                    .fontWeight(.semibold)
+                SecondaryText(text: transaction.getFormattedDate)
                 
                 Image("chevron.forward.dark")
             }
@@ -46,6 +38,6 @@ struct TransactionView: View {
 
 #Preview {
     TransactionView(
-        transaction: RecentTransactionsProvider.getRecentTransactions().first!
+        transaction: TransactionsProvider.getTransactions().first!
     )
 }
