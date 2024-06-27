@@ -8,7 +8,7 @@
 import Foundation
 
 struct Transaction: Hashable, Identifiable {
-    let id: Int
+    let id = UUID()
     let company: String
     let number: String
     let date: Date
