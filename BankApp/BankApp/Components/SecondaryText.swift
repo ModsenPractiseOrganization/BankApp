@@ -9,11 +9,12 @@ import SwiftUI
 
 struct SecondaryText: View {
     let text: String
+    var color: Color = .secondaryText
     
     var body: some View {
         Text(text)
             .fontWeight(.semibold)
             .font(.subheadline)
-            .foregroundStyle(.secondaryText)
+            .foregroundStyle(color)
     }
 }

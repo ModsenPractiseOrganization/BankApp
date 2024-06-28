@@ -28,7 +28,7 @@ struct TransactionView: View {
             Spacer()
             
             HStack {
-                SecondaryText(text: transaction.getFormattedDate)
+                SecondaryText(text: transaction.getFormattedAmount, color: .white)
                 
                 Image("chevron.forward.dark")
             }

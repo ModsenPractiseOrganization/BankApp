@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A010E5582C2EB70F000D2972 /* DateRangePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A010E5572C2EB70F000D2972 /* DateRangePickerViewModel.swift */; };
+		A06E17F42C2EA639000607F6 /* DateRangePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06E17F32C2EA639000607F6 /* DateRangePickerView.swift */; };
+		A06E17F72C2EB256000607F6 /* Extension + DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06E17F62C2EB256000607F6 /* Extension + DateFormatter.swift */; };
 		A0701F8B2C2B47520041B66F /* CurrentAccountViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0701F8A2C2B47520041B66F /* CurrentAccountViewCell.swift */; };
 		A0748C402C2AFA32002DEE84 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0748C3F2C2AFA32002DEE84 /* TransactionView.swift */; };
 		A07760B42C2DD2B300B70609 /* SelectAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07760B32C2DD2B300B70609 /* SelectAccountView.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A010E5572C2EB70F000D2972 /* DateRangePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePickerViewModel.swift; sourceTree = "<group>"; };
+		A06E17F32C2EA639000607F6 /* DateRangePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePickerView.swift; sourceTree = "<group>"; };
+		A06E17F62C2EB256000607F6 /* Extension + DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + DateFormatter.swift"; sourceTree = "<group>"; };
 		A0701F8A2C2B47520041B66F /* CurrentAccountViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAccountViewCell.swift; sourceTree = "<group>"; };
 		A0748C3F2C2AFA32002DEE84 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		A07760B32C2DD2B300B70609 /* SelectAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAccountView.swift; sourceTree = "<group>"; };
@@ -62,6 +68,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A010E5532C2EB6E9000D2972 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0CD1D442C2A255F004E2380 /* CurrentAccountView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A010E5542C2EB6EC000D2972 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A0E8AD2A2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A010E5552C2EB6F8000D2972 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A06E17F32C2EA639000607F6 /* DateRangePickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A010E5562C2EB6FD000D2972 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A010E5572C2EB70F000D2972 /* DateRangePickerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A06E17F22C2EA62E000607F6 /* DateRangePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A010E5552C2EB6F8000D2972 /* View */,
+				A010E5562C2EB6FD000D2972 /* ViewModel */,
+			);
+			path = DateRangePickerView;
+			sourceTree = "<group>";
+		};
+		A06E17F52C2EB248000607F6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A06E17F62C2EB256000607F6 /* Extension + DateFormatter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A0748C3E2C2AF9DF002DEE84 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +201,7 @@
 				A0748C3E2C2AF9DF002DEE84 /* Components */,
 				A0CD1D322C2A1DB9004E2380 /* DataProviders */,
 				A0CD1D3D2C2A2374004E2380 /* Enumerations */,
+				A06E17F52C2EB248000607F6 /* Extensions */,
 				A0CD1D372C2A1E18004E2380 /* Models */,
 				A0CD1D412C2A24D2004E2380 /* Views */,
 				A0CD1D262C2A1CF1004E2380 /* Assets.xcassets */,
@@ -201,6 +257,7 @@
 			children = (
 				A0C657BE2C2C751300841145 /* AllTransactionsView */,
 				A0CD1D422C2A2519004E2380 /* CurrentAccountView */,
+				A06E17F22C2EA62E000607F6 /* DateRangePickerView */,
 				A07760B22C2DD2A900B70609 /* SelectAccountView */,
 				A0E8AD302C2B6AC300CFFC0E /* TransactionDetailsView */,
 			);
@@ -210,26 +267,10 @@
 		A0CD1D422C2A2519004E2380 /* CurrentAccountView */ = {
 			isa = PBXGroup;
 			children = (
-				A0CD1D432C2A2552004E2380 /* View */,
-				A0E8AD292C2B5EE600CFFC0E /* ViewModel */,
+				A010E5532C2EB6E9000D2972 /* View */,
+				A010E5542C2EB6EC000D2972 /* ViewModel */,
 			);
 			path = CurrentAccountView;
-			sourceTree = "<group>";
-		};
-		A0CD1D432C2A2552004E2380 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A0CD1D442C2A255F004E2380 /* CurrentAccountView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A0E8AD292C2B5EE600CFFC0E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				A0E8AD2A2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A0E8AD302C2B6AC300CFFC0E /* TransactionDetailsView */ = {
@@ -322,6 +363,7 @@
 				A0CD1D362C2A1E01004E2380 /* AccountsProvider.swift in Sources */,
 				A0E8AD2B2C2B5EF900CFFC0E /* CurrentAccountViewModel.swift in Sources */,
 				A0C657C12C2C755300841145 /* AllTransactionsView.swift in Sources */,
+				A06E17F72C2EB256000607F6 /* Extension + DateFormatter.swift in Sources */,
 				A0E8AD382C2B777B00CFFC0E /* CustomButtonView.swift in Sources */,
 				A083F4342C2E0B6B00440B25 /* SecondaryText.swift in Sources */,
 				A083F43B2C2E126A00440B25 /* AllTransactionsViewModel.swift in Sources */,
@@ -331,7 +373,9 @@
 				A0E8AD322C2B6ACD00CFFC0E /* TransactionDetailsView.swift in Sources */,
 				A0CD1D392C2A1E28004E2380 /* Transaction.swift in Sources */,
 				A0701F8B2C2B47520041B66F /* CurrentAccountViewCell.swift in Sources */,
+				A010E5582C2EB70F000D2972 /* DateRangePickerViewModel.swift in Sources */,
 				A0CD1D452C2A255F004E2380 /* CurrentAccountView.swift in Sources */,
+				A06E17F42C2EA639000607F6 /* DateRangePickerView.swift in Sources */,
 				A0CD1D3C2C2A1E43004E2380 /* Account.swift in Sources */,
 				A07760B42C2DD2B300B70609 /* SelectAccountView.swift in Sources */,
 				A0748C402C2AFA32002DEE84 /* TransactionView.swift in Sources */,
