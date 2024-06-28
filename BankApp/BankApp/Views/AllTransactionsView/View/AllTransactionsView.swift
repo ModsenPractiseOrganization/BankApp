@@ -19,7 +19,7 @@ struct AllTransactionsView: View {
                 
                 ScrollView {
                     VStack {
-                        ForEach(viewModel.transactions) { transaction in
+                        ForEach(viewModel.filteredTransactions) { transaction in
                             VStack {
                                 TransactionView(transaction: transaction)
                                 if viewModel.isTransactionLast(transaction) {
@@ -40,6 +40,16 @@ struct AllTransactionsView: View {
                     .sheet(item: $viewModel.currentTransaction) { transaction in
                         TransactionDetailsView(transaction: transaction)
                             .presentationDetents([.large])
+                    }
+                    .sheet(isPresented: $viewModel.showDatePicker) {
+                        DateRangePickerView(
+                            startDate: $viewModel.startDate,
+                            endDate: $viewModel.endDate
+                        ) {
+                            viewModel.hideDatePicker()
+                        }
+                        .presentationDragIndicator(.visible)
+                        .presentationDetents([.medium])
                     }
                 }
                 .padding(.top, 20)
@@ -62,7 +72,7 @@ struct AllTransactionsView: View {
     @ViewBuilder
     func sortBarButton() -> some View {
         Button {
-            // MARK: - Мне так и не скинули DatePicker 🥄
+            viewModel.showDatePicker.toggle()
         } label: {
             Image(systemName: "ellipsis.circle")
                 .foregroundStyle(.white)

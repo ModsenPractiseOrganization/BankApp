@@ -21,12 +21,6 @@ struct Transaction: Hashable, Identifiable {
     }
     
     var getFormattedDate: String {
-        let dateFormatter: DateFormatter = {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "dd.MM.yyyy"
-            return formatter
-        }()
-        
-        return dateFormatter.string(from: date)
+        DateFormatter.displayDate.string(from: date)
     }
 }
