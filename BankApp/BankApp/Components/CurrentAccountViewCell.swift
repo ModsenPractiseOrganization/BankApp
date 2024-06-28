@@ -24,15 +24,8 @@ struct CurrentAccountViewCell: View {
                     .fontWeight(.bold)
                     .foregroundStyle(.white)
                 
-                Text(currentAccount.number)
-                    .fontWeight(.semibold)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondaryText)
-                
-                Text(currentAccount.hiddenPin)
-                    .fontWeight(.semibold)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondaryText)
+                SecondaryText(text: currentAccount.number)
+                SecondaryText(text: currentAccount.hiddenPin)
             }
             .padding([.top, .bottom], 5)
             

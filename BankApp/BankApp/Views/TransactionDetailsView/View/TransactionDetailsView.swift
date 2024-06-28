@@ -14,34 +14,27 @@ struct TransactionDetailsView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
-                HStack {
-                    Text("Transaction")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding(.leading, 6)
-                    
-                    Spacer()
-                }
-                .padding(.top, 20)
-                .padding(.bottom, 32)
+                largeTitle()
+                    .padding(.top, 20)
+                    .padding(.bottom, 32)
                 
-                TransactionInfoCell(
+                transactionInfoCell(
                     title: "Transaction was applied in",
                     value: transaction.company
                 )
-                TransactionInfoCell(
+                transactionInfoCell(
                     title: "Transaction number",
                     value: transaction.number
                 )
-                TransactionInfoCell(
+                transactionInfoCell(
                     title: "Date",
                     value: transaction.getFormattedDate
                 )
-                TransactionInfoCell(
+                transactionInfoCell(
                     title: "Transaction status",
                     value: transaction.status.rawValue
                 )
-                TransactionInfoCell(
+                transactionInfoCell(
                     title: "Amount",
                     value: transaction.getFormattedAmount
                 )
@@ -58,8 +51,19 @@ struct TransactionDetailsView: View {
     }
     
     @ViewBuilder
-    private func TransactionInfoCell(title: String, value: String) -> some View {
-        
+    private func largeTitle() -> some View {
+        HStack {
+            Text("Transaction")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding(.leading, 6)
+            
+            Spacer()
+        }
+    }
+    
+    @ViewBuilder
+    private func transactionInfoCell(title: String, value: String) -> some View {
         VStack(alignment: .leading) {
             Text(title)
                 .font(.title3)
@@ -80,5 +84,5 @@ struct TransactionDetailsView: View {
 }
 
 #Preview {
-    TransactionDetailsView(transaction: RecentTransactionsProvider.getRecentTransactions().first!)
+    TransactionDetailsView(transaction: TransactionsProvider.getTransactions().first!)
 }
